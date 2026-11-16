@@ -1,4 +1,7 @@
 # csv_practice.py
+#Reflection questions: 1.) Python is pretty good for ETL because it is able to automatically read, change and write big amounts of data. Excel is easier for viewing data and making quick manual changes but python is the better option for repeating tasks.
+# question 2.) A business could use a append-mode log file to help keep track of daily sales. Append mode is useful bc new entries are added without deleting older ones, which creates a history thta is able to be reviewed later.
+
 # Exercise 2:
 print("Exercise 2")
 import csv
