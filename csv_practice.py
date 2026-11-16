@@ -101,3 +101,22 @@ print("Total Revenue:", round(total_revenue, 2))
 # csv reader is better when you know the column positions, 
 # dictreader is easier because you can use the column names.
 
+# Exercise 7:
+print("Exercise 7")
+summary = {}
+
+with open("data/sales.csv", "r") as file:
+    reader = csv.DictReader(file)
+
+    for row in reader:
+        product = row["product"]
+        revenue = float(row["price"]) * int(row["quantity"])
+
+        if product in summary:
+            summary[product] += revenue
+        else:
+            summary[product] = revenue
+
+for product in sorted(summary):
+    print(product, ":", round(summary[product], 2))
+
