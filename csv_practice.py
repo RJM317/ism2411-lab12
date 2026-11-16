@@ -1,5 +1,6 @@
 # csv_practice.py
 # Exercise 2:
+print("Exercise 2")
 import csv
 
 with open("data/sales.csv", "r") as file:
@@ -9,6 +10,7 @@ with open("data/sales.csv", "r") as file:
         print(row)
       
 #Exercise 3:
+print("Exercise 3")
 import csv
 
 with open("data/sales.csv", "r") as file:
@@ -22,6 +24,7 @@ with open("data/sales.csv", "r") as file:
         print(row)
 
 #Exercise 4: 
+Print("Exercise 4")
 import csv
 
 total_revenue = 0
@@ -48,6 +51,7 @@ print()
 print(f"Total Revenue: ${total_revenue:.2f}")
 
 # Exercise 5:
+print("Exercise 5")
 total_rows = 0
 written_rows = 0
 
@@ -76,4 +80,24 @@ with open("data/sales.csv", "r") as infile:
 
 print("Rows in original file:", total_rows)
 print("Rows written to cleaned.csv:", written_rows)
+
+# Exercise 6:
+Print("Exercise 6")
+total_revenue = 0
+
+with open("data/sales.csv", "r") as file:
+    reader = csv.DictReader(file)
+
+    for row in reader:
+        product = row["product"]
+        price = float(row["price"])
+        quantity = int(row["quantity"])
+
+        total = price * quantity
+        total_revenue += total
+
+print("Total Revenue:", round(total_revenue, 2))
+
+# csv reader is better when you know the column positions, 
+# dictreader is easier because you can use the column names.
 
