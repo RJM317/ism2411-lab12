@@ -118,3 +118,13 @@ with open("data/sales.csv", "r") as file:
 for product in sorted(summary):
     print(product, ":", round(summary[product], 2))
 
+
+# Exercise 8:
+print("Exercise 8")
+
+timestamp = datetime.now()
+
+with open("data/run_log.txt", "a") as file:
+    file.write(f"{timestamp} - Total Revenue: ${total_revenue:.2f}\n")
+
+print("Log updated.")
