@@ -122,6 +122,8 @@ for product in sorted(summary):
 # Exercise 8:
 print("Exercise 8")
 
+import csv
+from datetime import datetime
 timestamp = datetime.now()
 
 with open("data/run_log.txt", "a") as file:
