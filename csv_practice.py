@@ -11,7 +11,6 @@ with open("data/sales.csv", "r") as file:
       
 #Exercise 3:
 print("Exercise 3")
-import csv
 
 with open("data/sales.csv", "r") as file:
     reader = csv.reader(file)
@@ -24,8 +23,7 @@ with open("data/sales.csv", "r") as file:
         print(row)
 
 #Exercise 4: 
-Print("Exercise 4")
-import csv
+print("Exercise 4")
 
 total_revenue = 0
 
@@ -82,7 +80,7 @@ print("Rows in original file:", total_rows)
 print("Rows written to cleaned.csv:", written_rows)
 
 # Exercise 6:
-Print("Exercise 6")
+print("Exercise 6")
 total_revenue = 0
 
 with open("data/sales.csv", "r") as file:
